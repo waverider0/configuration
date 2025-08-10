@@ -17,9 +17,6 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
 -- Format
-vim.opt.autoindent = false
-vim.opt.smartindent = false
-vim.opt.smarttab = true
 vim.cmd("filetype indent off")
 vim.cmd("autocmd FileType * setlocal noexpandtab tabstop=4 shiftwidth=4 softtabstop=4 formatoptions-=cro")
 

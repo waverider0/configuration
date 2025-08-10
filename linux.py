@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-import os, sys, shutil
+import os, sys, shutil, getpass
 from secret.crypto import SALT_FILE, derive_key, decrypt, atomic_write
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))

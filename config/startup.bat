@@ -1,3 +1,3 @@
 @echo off
 
-subst w: c:\Users\allen\work
+subst W: C:\Users\allen\work

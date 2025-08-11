@@ -7,10 +7,8 @@ vim.opt.swapfile = false
 vim.opt.number = true
 vim.opt.statusline = "%F"
 vim.opt.wrap = false
-
 vim.cmd.colorscheme("unokai")
 vim.api.nvim_set_hl(0, "Normal", { bg = "NONE" })
-vim.opt.termguicolors = true
 
 -- Search
 vim.opt.ignorecase = true

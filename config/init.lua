@@ -16,7 +16,7 @@ vim.opt.smartcase = true
 
 -- Format
 vim.cmd("filetype indent off")
-vim.cmd("autocmd FileType * setlocal noexpandtab tabstop=4 shiftwidth=4 softtabstop=4 formatoptions-=cro")
+vim.cmd("autocmd FileType * setlocal noexpandtab tabstop=2 shiftwidth=2 softtabstop=2 formatoptions-=cro")
 
 -- Keymaps
 vim.keymap.set("i"       , "<C-h>"   , "<C-w>") -- most terminals interpret ctrl-h as ctrl-backspace

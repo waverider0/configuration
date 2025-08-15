@@ -19,8 +19,6 @@ vim.cmd("filetype indent off")
 vim.cmd("autocmd FileType * setlocal noexpandtab tabstop=2 shiftwidth=2 softtabstop=2 formatoptions-=cro")
 
 -- Keymaps
-vim.keymap.set("i"       , "<C-h>"   , "<C-w>") -- most terminals interpret ctrl-h as ctrl-backspace
-vim.keymap.set("i"       , "<C-Del>" , "<C-o>dw")
 vim.keymap.set("i"       , "<C-c>"   , "<Esc>")
 vim.keymap.set("n"       , "<C-c>"   , function() if vim.v.hlsearch == 1 then vim.cmd("nohlsearch") end end)
 vim.keymap.set("n"       , "<C-e>"   , "<nop>")

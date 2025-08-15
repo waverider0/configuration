@@ -2,7 +2,7 @@ local wezterm = require "wezterm"
 
 local config = {
 	colors = { background = '#151515' },
-	font_size = 11,
+	font_size = 10,
 }
 
 if wezterm.target_triple:find("windows") then

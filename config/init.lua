@@ -32,5 +32,5 @@ vim.cmd.colorscheme("unokai")
 vim.api.nvim_set_hl(0, "Normal", { bg = "NONE" })
 
 vim.api.nvim_create_user_command("HLT", function()
-	vim.fn.matchadd("Visual", "\\t")
+	vim.fn.matchadd("Search", "\\t")
 end, {})

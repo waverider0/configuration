@@ -5,7 +5,6 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 CONFIGS = {
    r"config\.gitconfig":          r"C:\Users\allen\.gitconfig",
-   r"config\.wezterm.lua":        r"C:\Users\allen\.wezterm.lua",
    r"config\github.pub":          r"C:\Users\allen\.ssh\github.pub",
    r"config\init.lua":            r"C:\Users\allen\AppData\Local\nvim\init.lua",
    r"config\ssh_config":          r"C:\Users\allen\.ssh\config",

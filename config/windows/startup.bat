@@ -1,2 +1,2 @@
 @echo off
-subst W: C:\Users\allen\work
+subst W: C:\Users\allen\W_drive

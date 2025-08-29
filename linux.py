@@ -6,7 +6,6 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 CONFIGS = {
    "config/.gitconfig":   "/home/allen/.gitconfig",
-   "config/.wezterm.lua": "/home/allen/.wezterm.lua",
    "config/linux/.zshrc": "/home/allen/.zshrc",
    "config/github.pub":   "/home/allen/.ssh/github.pub",
    "config/init.lua":     "/home/allen/.config/nvim/init.lua",

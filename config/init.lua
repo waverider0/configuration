@@ -27,8 +27,7 @@ require("lazy").setup({
       "tanvirtin/monokai.nvim",
       config = function()
          vim.cmd("colorscheme monokai_pro")
-         vim.api.nvim_set_hl(0, "Normal", { bg = "NONE" })
-         vim.api.nvim_set_hl(0, "Todo", { fg = "NONE", bg = "NONE" })
+         vim.api.nvim_set_hl(0, "Normal", { bg = "#000000" })
       end,
    },
    {

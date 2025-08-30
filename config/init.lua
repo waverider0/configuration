@@ -90,6 +90,7 @@ vim.opt.smartcase = true
 vim.cmd [[
    " indents
    filetype indent off
+   set expandtab tabstop=3 shiftwidth=3 softtabstop=3
    autocmd FileType * setlocal expandtab tabstop=3 shiftwidth=3 softtabstop=3 formatoptions-=cro
 
    " search matches

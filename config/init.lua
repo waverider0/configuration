@@ -42,7 +42,7 @@ require("lazy").setup({
     dependencies = {{"mason-org/mason.nvim", opts = {}}, "neovim/nvim-lspconfig"},
     opts = {},
     config = function()
-      require("mason-lspconfig").setup({ensure_installed = {"clangd"}})
+      require("mason-lspconfig").setup({ensure_installed = {"clangd", "pyright"}})
       vim.keymap.set("n", "q", function()
         for _, win in ipairs(vim.api.nvim_list_wins()) do
           if vim.api.nvim_win_get_config(win).relative ~= "" then

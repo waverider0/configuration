@@ -8,7 +8,6 @@ CONFIGS = {
   "config/.gitconfig":   "/home/allen/.gitconfig",
   "config/linux/.zshrc": "/home/allen/.zshrc",
   "config/github.pub":   "/home/allen/.ssh/github.pub",
-  "config/init.lua":     "/home/allen/.config/nvim/init.lua",
   "config/ssh_config":   "/home/allen/.ssh/config",
 }
 

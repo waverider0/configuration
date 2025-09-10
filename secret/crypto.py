@@ -13,7 +13,6 @@ def atomic_write(path: str, data: bytes, mode: int = 0o600):
   os.replace(tmp, path)
 
 def derive_key(password: str, salt: bytes) -> bytes:
-  # https://cryptography.io/en/latest/hazmat/primitives/key-derivation-functions/#scrypt
   return Scrypt(salt, 32, 2**15, 8, 1).derive(password.encode())
 
 def encrypt(data: bytes, key: bytes) -> bytes:

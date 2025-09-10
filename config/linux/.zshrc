@@ -1,4 +1,4 @@
-export MANPAGER='nvim +Man!'
+export MANPAGER='vi +Man!'
 
 alias open='xdg-open'
 

@@ -1,0 +1,7 @@
+{
+  "editor.detectIndentation": false,
+  "editor.minimap.enabled": false,
+  "editor.tabSize": 2,
+  "vim.useSystemClipboard": true,
+  "workbench.startupEditor": "none"
+}

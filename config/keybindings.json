@@ -1,15 +1,15 @@
 [
   {
+    "key": "ctrl+b",
+    "command": "workbench.action.toggleSidebarVisibility"
+  },
+  {
     "key": "ctrl+tab",
     "command": "workbench.action.nextEditor"
   },
   {
     "key": "ctrl+shift+tab",
     "command": "workbench.action.previousEditor"
-  },
-  {
-    "key": "ctrl+b",
-    "command": "workbench.action.toggleSidebarVisibility"
   },
   {
     "key": "ctrl+t",
@@ -29,5 +29,19 @@
     "key": "ctrl+p",
     "command": "workbench.action.quickOpenSelectPrevious",
     "when": "inQuickOpen"
+  },
+  {
+    "key": "ctrl+,",
+    "command": "workbench.action.terminal.focus",
+    "when": "!terminalFocus"
+  },
+  {
+    "key": "ctrl+,",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+shift+,",
+    "command": "workbench.action.toggleAuxiliaryBar"
   }
 ]

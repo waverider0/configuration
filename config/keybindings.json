@@ -1,9 +1,5 @@
 [
   {
-    "key": "ctrl+b",
-    "command": "workbench.action.toggleSidebarVisibility"
-  },
-  {
     "key": "ctrl+tab",
     "command": "workbench.action.nextEditor"
   },
@@ -43,5 +39,14 @@
   {
     "key": "ctrl+shift+,",
     "command": "workbench.action.toggleAuxiliaryBar"
+  },
+  {
+    "key": "ctrl+b",
+    "command": "workbench.action.toggleSidebarVisibility"
+  },
+  {
+    "key": "ctrl+w",
+    "command": "-extension.vim_ctrl+w",
+    "when": "editorTextFocus && vim.active && vim.use<C-w> && !inDebugRepl"
   }
 ]

@@ -4,5 +4,9 @@
   "editor.tabSize": 2,
   "terminal.integrated.defaultProfile.windows": "Command Prompt",
   "vim.useSystemClipboard": true,
+  "vim.normalModeKeyBindings": [
+    {"before": ["<C-j>"], "after": ["}"]},
+    {"before": ["<C-k>"], "after": ["{"]}
+  ],
   "workbench.startupEditor": "none"
 }

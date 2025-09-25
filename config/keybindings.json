@@ -1,6 +1,7 @@
 [
   {"key": "ctrl+tab", "command": "workbench.action.nextEditor"},
   {"key": "ctrl+shift+tab", "command": "workbench.action.previousEditor"},
+  {"key": "ctrl+w", "command": "-extension.vim_ctrl+w", "when": "editorTextFocus && vim.active && vim.use<C-w> && !inDebugRepl"},
 
   {"key": "ctrl+t", "command": "workbench.action.quickOpen"},
   {"key": "ctrl+c", "command": "workbench.action.closeQuickOpen", "when": "inQuickOpen"},
@@ -10,7 +11,5 @@
   {"key": "ctrl+,", "command": "workbench.action.terminal.focus", "when": "!terminalFocus"},
   {"key": "ctrl+,", "command": "workbench.action.focusActiveEditorGroup", "when": "terminalFocus"},
   {"key": "ctrl+.", "command": "workbench.action.toggleAuxiliaryBar"},
-  {"key": "ctrl+b", "command": "workbench.action.toggleSidebarVisibility"},
-
-  {"key": "ctrl+w", "command": "-extension.vim_ctrl+w", "when": "editorTextFocus && vim.active && vim.use<C-w> && !inDebugRepl"}
+  {"key": "ctrl+b", "command": "workbench.action.toggleSidebarVisibility"}
 ]

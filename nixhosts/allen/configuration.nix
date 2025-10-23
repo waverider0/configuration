@@ -24,6 +24,7 @@
         discord
         ffmpeg
         fzf
+        git
         keepassxc
         mpv
         obs-studio
@@ -43,7 +44,6 @@
   environment = {
     systemPackages = (with pkgs; [
       curl
-      git
       htop
       lm_sensors
       lsof

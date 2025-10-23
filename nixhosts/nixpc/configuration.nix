@@ -1,11 +1,7 @@
 { config, pkgs, pkgs-unstable, ... }:
 
 {
-  imports = [
-    ../common.nix
-    ./hardware-configuration.nix
-    ./virtualisation.nix
-  ];
+  imports = [ ./hardware-configuration.nix ];
 
   system.stateVersion = "25.05";
 
@@ -36,8 +32,9 @@
         ripgrep
         signal-desktop
         spotdl
-        spotify
+        vscodium-fhs
         wireshark
+        xournalpp
         yt-dlp
       ]) ++ (with pkgs-unstable; []);
     };
@@ -45,22 +42,24 @@
 
   environment = {
     systemPackages = (with pkgs; [
+      curl
+      git
+      htop
       lm_sensors
       lsof
       man-pages
       man-pages-posix
+      vim
+      wget
       wl-clipboard
     ]) ++ (with pkgs-unstable; []);
 
-    plasma6.excludePackages = with pkgs.kdePackages; [
-      elisa
-      kate
-      konsole
-    ];
+    plasma6.excludePackages = with pkgs.kdePackages; [ elisa kate ];
   };
 
   programs = {
     gnome-disks.enable = true;
+    localsend.enable = true;
     zsh.enable = true;
   };
 

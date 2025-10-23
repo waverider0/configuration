@@ -49,7 +49,7 @@
       lsof
       man-pages
       man-pages-posix
-      vim
+      neovim
       wget
       wl-clipboard
     ]) ++ (with pkgs-unstable; []);

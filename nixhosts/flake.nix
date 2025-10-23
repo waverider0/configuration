@@ -6,9 +6,9 @@
 
   outputs = { self, nixpkgs, nixpkgs-unstable, ... }: {
     nixosConfigurations = {
-      "nixpc" = nixpkgs.lib.nixosSystem {
+      "allen" = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
-        modules = [ ./hosts/nixpc/configuration.nix ];
+        modules = [ ./hosts/allen/configuration.nix ];
         specialArgs = { pkgs-unstable = import nixpkgs-unstable { system = "x86_64-linux"; config.allowUnfree = true; }; };
       };
     };

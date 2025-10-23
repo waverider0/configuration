@@ -5,10 +5,13 @@ from secret.crypto import SALT_FILE, derive_key, decrypt, atomic_write
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 CONFIGS = {
-  "config/.gitconfig":   "/home/allen/.gitconfig",
-  "config/linux/.zshrc": "/home/allen/.zshrc",
-  "config/github.pub":   "/home/allen/.ssh/github.pub",
-  "config/ssh_config":   "/home/allen/.ssh/config",
+  "config/.gitconfig":       "/home/allen/.gitconfig",
+  "config/.vimrc":           "/home/allen/.vimrc",
+  "config/github.pub":       "/home/allen/.ssh/github.pub",
+  "config/keybindings.json": "/home/allen/.config/VSCodium/User/keybindings.json",
+  "config/settings.json":    "/home/allen/.config/VSCodium/User/settings.json",
+  "config/ssh_config":       "/home/allen/.ssh/config",
+  "config/linux/.zshrc":     "/home/allen/.zshrc", # chsh -s $(which zsh)
 }
 
 SECRETS = {

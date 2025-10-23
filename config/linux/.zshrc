@@ -1,3 +1,4 @@
+export PS1='%n@%m %F{#00ff87}%~%f %# '
 export MANPAGER='nvim +Man!'
 
 alias open='xdg-open'

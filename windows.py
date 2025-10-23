@@ -4,13 +4,13 @@ from secret.crypto import SALT_FILE, derive_key, decrypt, atomic_write
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 CONFIGS = {
-  "config/.gitconfig":          "C:/Users/allen/.gitconfig",
-  "config/.vimrc":              "C:/Users/allen/.vimrc",
-  "config/github.pub":          "C:/Users/allen/.ssh/github.pub",
-  "config/keybindings.json":    "C:/Users/allen/AppData/Roaming/VSCodium/User/keybindings.json",
-  "config/settings.json":       "C:/Users/allen/AppData/Roaming/VSCodium/User/settings.json",
-  "config/ssh_config":          "C:/Users/allen/.ssh/config",
-  "config/windows/startup.bat": "C:/ProgramData/Microsoft/Windows/Start Menu/Programs/Startup/startup.bat", # requires admin
+  "config/.gitconfig":              "C:/Users/allen/.gitconfig",
+  #"config/.vimrc":                 "C:/Users/allen/.vimrc",
+  "config/github.pub":              "C:/Users/allen/.ssh/github.pub",
+  "config/vscode_keybindings.json": "C:/Users/allen/AppData/Roaming/VSCodium/User/keybindings.json",
+  "config/vscode_settings.json":    "C:/Users/allen/AppData/Roaming/VSCodium/User/settings.json",
+  "config/ssh_config":              "C:/Users/allen/.ssh/config",
+  "config/windows/startup.bat":     "C:/ProgramData/Microsoft/Windows/Start Menu/Programs/Startup/startup.bat", # requires admin
 }
 
 SECRETS = {

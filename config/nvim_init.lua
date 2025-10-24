@@ -1,12 +1,11 @@
-vim.cmd "syntax on"
+vim.cmd('autocmd FileType * setlocal shiftwidth=2 tabstop=2 softtabstop=2 expandtab')
 vim.cmd "colorscheme unokai"
+vim.cmd "syntax on"
+
+vim.keymap.set({"n","v"}, "<C-c>", ":nohlsearch<CR>")
 vim.keymap.set("i", "<C-c>", "<Esc>")
+
 vim.opt.autoindent = true
 vim.opt.clipboard = "unnamedplus"
-vim.opt.expandtab = true
 vim.opt.number = true
 vim.opt.relativenumber = true
-vim.opt.shiftwidth = 2
-vim.opt_local.softtabstop = 2
-vim.opt.tabstop = 2
-vim.cmd('autocmd FileType python setlocal shiftwidth=2 tabstop=2 softtabstop=2 expandtab')

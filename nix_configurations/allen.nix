@@ -1,5 +1,9 @@
-{ config, pkgs, pkgs-unstable, ... }:
+{ config, pkgs, ... }:
 
+let
+  unstableTarball = builtins.fetchTarball { url = "https://github.com/NixOS/nixpkgs/archive/d5faa84122bc0a1fd5d378492efce4e289f8eac1.tar.gz"; sha256 = "0r2pkx7m1pb0fzfhb74jkr8y5qhs2b93sak5bd5rabvbm2zn36zs"; };
+  pkgs-unstable = import unstableTarball { config.allowUnfree = true; };
+in
 {
   imports = [ ./hardware-configuration.nix ];
 
@@ -19,7 +23,7 @@
       description = "allen";
       extraGroups = [ "networkmanager" "wheel" ];
 
-      packages = (with pkgs; [
+      packages = (with pkgs-unstable; [
         brave
         discord
         ffmpeg
@@ -37,12 +41,12 @@
         wireshark
         xournalpp
         yt-dlp
-      ]) ++ (with pkgs-unstable; []);
+      ]) ++ (with pkgs; []);
     };
   };
 
   environment = {
-    systemPackages = (with pkgs; [
+    systemPackages = with pkgs; [
       curl
       htop
       lm_sensors
@@ -52,7 +56,7 @@
       neovim
       wget
       wl-clipboard
-    ]) ++ (with pkgs-unstable; []);
+    ];
 
     plasma6.excludePackages = with pkgs.kdePackages; [ elisa kate ];
   };

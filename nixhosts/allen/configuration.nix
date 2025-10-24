@@ -28,13 +28,12 @@
         keepassxc
         mpv
         obs-studio
-        (python313.withPackages (ps: [ ps.cryptography ps.numpy ps.matplotlib ]))
+        (python313.withPackages (ps: [ ps.cryptography ]))
         qbittorrent
         ripgrep
         signal-desktop
         spotdl
         vscodium-fhs
-        wine
         wireshark
         xournalpp
         yt-dlp

@@ -13,65 +13,16 @@ in
   imports = [ ./hardware-configuration.nix ];
 
   system.stateVersion = "25.05";
-
-  nixpkgs.config.allowUnfree = true;
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  users = {
-    defaultUserShell = pkgs.zsh;
+  networking.hostName = "nixos";
+  networking.networkmanager.enable = true;
 
-    users.allen = {
-      isNormalUser = true;
-      description = "allen";
-      extraGroups = [ "networkmanager" "wheel" ];
-
-      packages = (with pkgs-unstable; [
-        brave
-        discord
-        ffmpeg
-        fzf
-        git
-        keepassxc
-        mpv
-        neofetch
-        obs-studio
-        (python313.withPackages (ps: [ ps.cryptography ]))
-        qbittorrent
-        ripgrep
-        signal-desktop
-        spotdl
-        vscodium-fhs
-        wireshark
-        xournalpp
-        yt-dlp
-      ]) ++ (with pkgs; []);
-    };
-  };
-
-  environment = {
-    systemPackages = with pkgs; [
-      curl
-      htop
-      lm_sensors
-      lsof
-      man-pages
-      man-pages-posix
-      neovim
-      wget
-      wl-clipboard
-    ];
-
-    plasma6.excludePackages = with pkgs.kdePackages; [ elisa kate ];
-  };
-
-  programs = {
-    gnome-disks.enable = true;
-    localsend.enable = true;
-    zsh.enable = true;
-  };
+  hardware.bluetooth.enable = true;
+  security.rtkit.enable = true;
 
   services = {
     displayManager.sddm.enable = true;
@@ -96,24 +47,60 @@ in
     };
   };
 
-  hardware.bluetooth.enable = true;
-
-  networking.hostName = "nixos";
-  networking.networkmanager.enable = true;
-
-  time.timeZone = "America/New_York";
-  i18n.defaultLocale = "en_US.UTF-8";
-  i18n.extraLocaleSettings = {
-    LC_ADDRESS        = "en_US.UTF-8";
-    LC_IDENTIFICATION = "en_US.UTF-8";
-    LC_MEASUREMENT    = "en_US.UTF-8";
-    LC_MONETARY       = "en_US.UTF-8";
-    LC_NAME           = "en_US.UTF-8";
-    LC_NUMERIC        = "en_US.UTF-8";
-    LC_PAPER          = "en_US.UTF-8";
-    LC_TELEPHONE      = "en_US.UTF-8";
-    LC_TIME           = "en_US.UTF-8";
+  programs = {
+    gnome-disks.enable = true;
+    localsend.enable = true;
+    zsh.enable = true;
   };
 
-  security.rtkit.enable = true;
+  environment = {
+    systemPackages = with pkgs; [
+      curl
+      htop
+      lm_sensors
+      lsof
+      man-pages
+      man-pages-posix
+      neovim
+      wget
+      wl-clipboard
+    ];
+    plasma6.excludePackages = with pkgs.kdePackages; [ elisa kate ];
+  };
+
+  users = {
+    defaultUserShell = pkgs.zsh;
+    users.allen = {
+      isNormalUser = true;
+      description = "allen";
+      extraGroups = [ "networkmanager" "wheel" ];
+      packages = (with pkgs-unstable; [
+        brave
+        discord
+        ffmpeg
+        fzf
+        git
+        keepassxc
+        mpv
+        neofetch
+        obs-studio
+        (python313.withPackages (ps: [ ps.cryptography ]))
+        qbittorrent
+        ripgrep
+        signal-desktop
+        spotdl
+        vscodium-fhs
+        wireshark
+        xournalpp
+        yt-dlp
+      ]) ++ (with pkgs; []);
+    };
+  };
+
+  system.activationScripts.kwinShortcuts = ''
+    ${pkgs.kdePackages.kconfig}/bin/kwriteconfig6 --file /home/allen/.config/kglobalshortcutsrc --group kwin --key "Window Close" "Meta+W,Alt+F4,Close Window"
+    ${pkgs.kdePackages.kconfig}/bin/kwriteconfig6 --file /home/allen/.config/kglobalshortcutsrc --group kwin --key "Window Maximize" "Meta+F,Meta+PgUp,Meta+PgUp,Maximize Window"
+    ${pkgs.kdePackages.kconfig}/bin/kwriteconfig6 --file /home/allen/.config/kglobalshortcutsrc --group kwin --key "Window Minimize" "Meta+M,Meta+PgDown,Meta+PgDown,Minimize Window"
+    ${pkgs.kdePackages.kconfig}/bin/kwriteconfig6 --file /home/allen/.config/kglobalshortcutsrc --group services --group org.kde.konsole.desktop --key "_launch" "Meta+Return,Ctrl+Alt+T"
+  '';
 }

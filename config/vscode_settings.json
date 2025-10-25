@@ -5,6 +5,8 @@
   "editor.minimap.enabled": false,
   "editor.tabSize": 2,
   "terminal.integrated.defaultProfile.windows": "Command Prompt",
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "terminal.integrated.defaultProfile.linux": "zsh",
   "vim.useSystemClipboard": true,
   "workbench.startupEditor": "none"
 }

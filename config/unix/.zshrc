@@ -3,6 +3,7 @@ export MANPAGER='nvim +Man!'
 
 alias open='xdg-open'
 alias vi='nvim'
+alias code='codium'
 
 bindkey -v
 bindkey -M viins '^[[1;5D' backward-word

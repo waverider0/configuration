@@ -11,6 +11,7 @@ CONFIGS = {
   "config/vscode_keybindings.json": "/home/allen/.config/VSCodium/User/keybindings.json",
   "config/vscode_settings.json":    "/home/allen/.config/VSCodium/User/settings.json",
   "config/ssh_config":              "/home/allen/.ssh/config",
+  "config/unix/.bashrc":            "/home/allen/.bashrc",
   "config/unix/.tmux.conf":         "/home/allen/.tmux.conf",
   "config/unix/.zshrc":             "/home/allen/.zshrc", # chsh -s $(which zsh)
 }

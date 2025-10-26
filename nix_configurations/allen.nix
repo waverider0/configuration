@@ -50,6 +50,7 @@ in
   programs = {
     gnome-disks.enable = true;
     localsend.enable = true;
+    tmux.enable = true;
     zsh.enable = true;
   };
 

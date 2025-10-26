@@ -45,8 +45,10 @@ in
   };
 
   programs = {
+    git.enable = true;
     gnome-disks.enable = true;
     localsend.enable = true;
+    neovim.enable = true;
     tmux.enable = true;
     zsh.enable = true;
   };
@@ -59,7 +61,6 @@ in
       lsof
       man-pages
       man-pages-posix
-      neovim
       wget
       wl-clipboard
     ];
@@ -80,7 +81,6 @@ in
         discord
         ffmpeg
         fzf
-        git
         kdePackages.kdenlive
         keepassxc
         mpv

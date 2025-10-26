@@ -14,8 +14,6 @@ bindkey -M viins '^[[3;5~' kill-word
 setopt EXTENDED_GLOB
 setopt GLOBDOTS
 setopt NULL_GLOB
-setopt MENU_COMPLETE
-unsetopt LIST_AMBIGUOUS
 
 zmodload zsh/complist
 autoload -Uz compinit && compinit

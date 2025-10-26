@@ -92,6 +92,7 @@ in
         ripgrep
         signal-desktop
         spotdl
+        tree
         vscodium-fhs
         wireshark
         xournalpp

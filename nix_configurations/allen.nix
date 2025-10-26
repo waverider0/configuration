@@ -1,12 +1,9 @@
-{ config, ... }:
+{ config, pkgs, ... }:
 
 let
   # https://channels.nixos.org/
   # https://nixos.wiki/wiki/Nix_Hash
-  pkgs-tgz = builtins.fetchTarball { url = "https://github.com/NixOS/nixpkgs/archive/95ec937f47c15392185aafd64480dc128f8a80bd.tar.gz"; sha256 = "05lpdk9d0ry4fjq06p77v6qv5mh69ss93pmrc0gflhi0a0y4xzrw"; };
   pkgs-unstable-tgz = builtins.fetchTarball { url = "https://github.com/NixOS/nixpkgs/archive/d5faa84122bc0a1fd5d378492efce4e289f8eac1.tar.gz"; sha256 = "0r2pkx7m1pb0fzfhb74jkr8y5qhs2b93sak5bd5rabvbm2zn36zs"; };
-
-  pkgs = import pkgs-tgz { config.allowUnfree = true; };
   pkgs-unstable = import pkgs-unstable-tgz { config.allowUnfree = true; };
 in
 {
@@ -66,7 +63,10 @@ in
       wget
       wl-clipboard
     ];
-    plasma6.excludePackages = with pkgs.kdePackages; [ elisa kate ];
+    plasma6.excludePackages = with pkgs.kdePackages; [
+      elisa
+      kate
+    ];
   };
 
   users = {
@@ -81,10 +81,12 @@ in
         ffmpeg
         fzf
         git
+        kdePackages.kdenlive
         keepassxc
         mpv
         neofetch
         obs-studio
+        pinta
         (python313.withPackages (ps: [ ps.cryptography ]))
         qbittorrent
         ripgrep

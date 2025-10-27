@@ -55,12 +55,14 @@ in
 
   environment = {
     systemPackages = with pkgs; [
+      binutils
       curl
       htop
       lm_sensors
       lsof
       man-pages
       man-pages-posix
+      pciutils
       wget
       wl-clipboard
     ];

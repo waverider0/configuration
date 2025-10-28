@@ -89,9 +89,8 @@ in
         neofetch
         obs-studio
         pinta
-        (python313.withPackages (ps: [ ps.cryptography ]))
+        (python313.withPackages (ps: [ps.cryptography ps.matplotlib ps.numpy ps.scipy ps.sympy ps.z3-solver]))
         qbittorrent
-        ripgrep
         signal-desktop
         spotdl
         tree

@@ -1,5 +1,6 @@
 vim.cmd('autocmd FileType * setlocal formatoptions-=cro shiftwidth=2 tabstop=2 softtabstop=2 expandtab')
 vim.cmd "colorscheme unokai"
+vim.cmd('highlight Normal ctermbg=none guibg=none')
 vim.cmd "syntax on"
 
 vim.keymap.set({"n","v"}, "<C-c>", ":nohlsearch<CR>", { silent = true })

@@ -55,7 +55,9 @@ in
 
   environment = {
     systemPackages = with pkgs; [
+      alacritty
       binutils
+      clang
       curl
       htop
       lm_sensors

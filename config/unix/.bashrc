@@ -1,3 +1,4 @@
+export EDITOR=nvim
 export MANPAGER='nvim +Man!'
 alias open='xdg-open'
 alias vi='nvim'

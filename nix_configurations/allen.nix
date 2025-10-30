@@ -62,6 +62,7 @@ in
       lsof
       man-pages
       man-pages-posix
+      moreutils
       pciutils
       wget
       wl-clipboard

@@ -106,6 +106,8 @@ in
   };
 
   system.activationScripts.kwinShortcuts = ''
+    ${pkgs.kdePackages.kconfig}/bin/kwriteconfig6 --file /home/allen/.config/kcminputrc --group Keyboard --key RepeatDelay "250"
+    ${pkgs.kdePackages.kconfig}/bin/kwriteconfig6 --file /home/allen/.config/kcminputrc --group Keyboard --key RepeatRate "25"
     ${pkgs.kdePackages.kconfig}/bin/kwriteconfig6 --file /home/allen/.config/kglobalshortcutsrc --group kwin --key "Overview" "none,none,Toggle Overview"
     ${pkgs.kdePackages.kconfig}/bin/kwriteconfig6 --file /home/allen/.config/kglobalshortcutsrc --group kwin --key "Window Close" "Meta+W,Alt+F4,Close Window"
     ${pkgs.kdePackages.kconfig}/bin/kwriteconfig6 --file /home/allen/.config/kglobalshortcutsrc --group kwin --key "Window Maximize" "Meta+F,Meta+PgUp,Maximize Window"

@@ -11,6 +11,7 @@ in
 
   system.stateVersion = "25.05";
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nixpkgs.config.allowUnfree = true;
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -49,6 +50,12 @@ in
     gnome-disks.enable = true;
     localsend.enable = true;
     neovim.enable = true;
+    steam = {
+      enable = true;
+      remotePlay.openFirewall = true;
+      dedicatedServer.openFirewall = true;
+      localNetworkGameTransfers.openFirewall = true;
+    };
     tmux.enable = true;
     zsh.enable = true;
   };

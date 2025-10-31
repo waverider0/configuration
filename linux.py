@@ -6,7 +6,6 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 CONFIGS = {
   "config/.gitconfig":              "/home/allen/.gitconfig",
-  "config/alacritty.toml":          "/home/allen/.config/alacritty/alacritty.toml",
   "config/nvim_init.lua":           "/home/allen/.config/nvim/init.lua",
   "config/github.pub":              "/home/allen/.ssh/github.pub",
   "config/vscode_keybindings.json": "/home/allen/.config/VSCodium/User/keybindings.json",

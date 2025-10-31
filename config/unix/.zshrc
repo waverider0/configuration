@@ -6,20 +6,15 @@ alias open='xdg-open'
 alias vi='nvim'
 alias code='codium'
 
+setopt EXTENDED_GLOB
+setopt GLOBDOTS
+setopt NULL_GLOB
+
 bindkey -v
 bindkey -M viins '^[[1;5D' backward-word
 bindkey -M viins '^[[1;5C' forward-word
 bindkey -M viins '^H' backward-kill-word
 bindkey -M viins '^[[3;5~' kill-word
-
-setopt EXTENDED_GLOB
-setopt GLOBDOTS
-setopt NULL_GLOB
-
-zmodload zsh/complist
-autoload -Uz compinit && compinit
-zstyle ':completion:*' menu select
-zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'l:|=*'
 
 autoload -Uz history-search-end
 zle -N history-beginning-search-backward-end history-search-end

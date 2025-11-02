@@ -2,8 +2,7 @@ vim.cmd('autocmd FileType * setlocal formatoptions-=cro shiftwidth=2 tabstop=2 s
 vim.cmd "colorscheme unokai"
 vim.cmd "syntax on"
 
-vim.keymap.set({"n","v"}, "<C-c>", ":nohlsearch<CR>", { silent = true })
-vim.keymap.set("i", "<C-c>", "<Esc>")
+vim.keymap.set({"i","n","v"}, "<C-c>", "<Esc>:nohlsearch<CR>", { silent = true })
 
 vim.opt.autoindent = true
 vim.opt.clipboard = "unnamedplus"

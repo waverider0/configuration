@@ -50,7 +50,7 @@ in
     gnome-disks.enable = true;
     localsend.enable = true;
     neovim.enable = true;
-    nix-ld = { # for mojo
+    nix-ld = { # mojo
       enable = true;
       libraries = with pkgs; [ libbsd ];
     };
@@ -103,7 +103,7 @@ in
         neofetch
         obs-studio
         pinta
-        pixi # for mojo
+        pixi # mojo
         prismlauncher
         (python313.withPackages (ps: [ps.cryptography]))
         qbittorrent

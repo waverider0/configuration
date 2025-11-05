@@ -69,6 +69,7 @@ in
       alacritty
       binutils
       clang
+      cloc
       curl
       htop
       lm_sensors

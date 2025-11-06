@@ -66,11 +66,11 @@ in
 
   environment = {
     systemPackages = with pkgs; [
-      alacritty
       binutils
       clang
       cloc
       curl
+      fzf
       htop
       lm_sensors
       lsof
@@ -95,10 +95,10 @@ in
       description = "allen";
       extraGroups = [ "networkmanager" "wheel" ];
       packages = (with pkgs-unstable; [
+        alacritty
         brave
         discord
         ffmpeg
-        fzf
         kdePackages.kdenlive
         keepassxc
         mpv

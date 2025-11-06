@@ -78,6 +78,7 @@ in
       man-pages-posix
       moreutils
       pciutils
+      ripgrep
       wget
       wl-clipboard
     ];

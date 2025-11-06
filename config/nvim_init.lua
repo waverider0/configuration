@@ -5,3 +5,5 @@ vim.keymap.set({"i","n","v"}, "<C-c>", "<Esc>:nohlsearch<CR>", { silent = true }
 vim.opt.autoindent = true
 vim.opt.clipboard = "unnamedplus"
 vim.opt.cursorline = true
+vim.wo.relativenumber = true
+vim.wo.number = true

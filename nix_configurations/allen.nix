@@ -112,7 +112,6 @@ in
         signal-desktop
         spotdl
         tree
-        vscodium-fhs
         wireshark
         xournalpp
         yt-dlp

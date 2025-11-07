@@ -11,5 +11,11 @@
   "theme": { "mode": "system", "light": "Ayu Light", "dark": "Ayu Dark" },
   "tab_size": 2,
   "ui_font_size": 16,
-  "vim_mode": true
+  "vim_mode": true,
+
+  "diagnostics_max_severity": "off",
+  "diagnostics": { "inline": { "enabled": false } },
+  "scrollbar": { "diagnostics": "none" },
+  "project_panel": { "show_diagnostics": "off" },
+  "tabs": { "show_diagnostics": "off" }
 }

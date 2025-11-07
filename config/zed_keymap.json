@@ -17,7 +17,7 @@
     "bindings": {
       "ctrl-c": "menu::Cancel",
       "ctrl-n": "menu::SelectNext",
-      "ctrl-p": "menu::SelectPrev"
+      "ctrl-p": "menu::SelectPrevious"
     }
   }
 ]

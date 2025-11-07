@@ -5,17 +5,14 @@ from secret.crypto import SALT_FILE, derive_key, decrypt, atomic_write
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 CONFIGS = {
-  "config/.gitconfig":              "/home/allen/.gitconfig",
-  "config/nvim_init.lua":           "/home/allen/.config/nvim/init.lua",
-  "config/github.pub":              "/home/allen/.ssh/github.pub",
-  "config/vscode_keybindings.json": "/home/allen/.config/VSCodium/User/keybindings.json",
-  "config/vscode_settings.json":    "/home/allen/.config/VSCodium/User/settings.json",
-  "config/ssh_config":              "/home/allen/.ssh/config",
-  "config/zed_keymap.json":         "/home/allen/.config/zed/keymap.json",
-  "config/zed_settings.json":       "/home/allen/.config/zed/settings.json",
-  "config/unix/.bashrc":            "/home/allen/.bashrc",
-  "config/unix/.tmux.conf":         "/home/allen/.tmux.conf",
-  "config/unix/.zshrc":             "/home/allen/.zshrc", # chsh -s $(which zsh)
+  "config/.gitconfig":        "/home/allen/.gitconfig",
+  "config/nvim_init.lua":     "/home/allen/.config/nvim/init.lua",
+  "config/github.pub":        "/home/allen/.ssh/github.pub",
+  "config/ssh_config":        "/home/allen/.ssh/config",
+  "config/zed_keymap.json":   "/home/allen/.config/zed/keymap.json",
+  "config/zed_settings.json": "/home/allen/.config/zed/settings.json",
+  "config/unix/.tmux.conf":   "/home/allen/.tmux.conf",
+  "config/unix/.zshrc":       "/home/allen/.zshrc", # chsh -s $(which zsh)
 }
 
 SECRETS = {

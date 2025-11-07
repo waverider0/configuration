@@ -1,8 +1,10 @@
 [
   {
-    "context": "Editor && vim_mode == normal",
+    "context": "Editor && vim_mode == normal || vim_mode == visual",
     "bindings": {
-      "ctrl-b": "workspace::ToggleLeftDock"
+      "ctrl-b": "workspace::ToggleLeftDock",
+      "ctrl-up": ["workspace::SendKeystrokes", "{"],
+      "ctrl-down": ["workspace::SendKeystrokes", "}"]
     }
   },
   {

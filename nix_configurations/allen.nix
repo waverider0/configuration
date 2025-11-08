@@ -72,6 +72,7 @@ in
       curl
       fzf
       htop
+      linuxPackages.perf
       lm_sensors
       lsof
       man-pages

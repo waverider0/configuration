@@ -79,6 +79,7 @@ in
       man-pages-posix
       moreutils
       pciutils
+      perf-tools
       ripgrep
       wget
       wl-clipboard
@@ -100,6 +101,7 @@ in
         brave
         discord
         ffmpeg
+        flamegraph
         kdePackages.kdenlive
         keepassxc
         mpv

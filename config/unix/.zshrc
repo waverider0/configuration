@@ -2,9 +2,10 @@ export PS1='%n@%m:%F{#00ff77}%~%f$ '
 export EDITOR=nvim
 export MANPAGER='nvim +Man!'
 
+alias code='vscodium'
 alias open='xdg-open'
 alias vi='nvim'
-alias zed='zeditor'
+alias zd='zeditor'
 
 setopt EXTENDED_GLOB
 setopt GLOBDOTS

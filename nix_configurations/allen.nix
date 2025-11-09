@@ -50,12 +50,6 @@ in
     gnome-disks.enable = true;
     localsend.enable = true;
     neovim.enable = true;
-    steam = {
-      enable = true;
-      remotePlay.openFirewall = true;
-      dedicatedServer.openFirewall = true;
-      localNetworkGameTransfers.openFirewall = true;
-    };
     tmux.enable = true;
     zsh.enable = true;
   };
@@ -110,6 +104,7 @@ in
         signal-desktop
         spotdl
         tree
+        vscodium-fhs
         wireshark
         xournalpp
         yt-dlp

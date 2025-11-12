@@ -92,6 +92,7 @@ in
         discord
         ffmpeg
         flamegraph
+        gource
         kdePackages.kdenlive
         keepassxc
         mpv

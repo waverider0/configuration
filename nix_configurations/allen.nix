@@ -50,12 +50,6 @@ in
     gnome-disks.enable = true;
     localsend.enable = true;
     neovim.enable = true;
-    steam = {
-      enable = true;
-      remotePlay.openFirewall = true;
-      dedicatedServer.openFirewall = true;
-      localNetworkGameTransfers.openFirewall = true;
-    };
     tmux.enable = true;
     zsh.enable = true;
   };
@@ -106,7 +100,7 @@ in
         obs-studio
         pinta
         prismlauncher
-        (python313.withPackages (ps: [ps.cryptography]))
+        (python313.withPackages (ps: [ps.cryptography ps.matplotlib ps.numpy ps.z3-solver ]))
         qbittorrent
         signal-desktop
         spotdl

@@ -1,0 +1,26 @@
+[
+  {
+    "context": "Workspace || Editor && (vim_mode == normal || vim_mode == visual)",
+    "bindings": {
+      "ctrl-.": "workspace::ToggleBottomDock",
+      "ctrl-b": "workspace::ToggleLeftDock",
+      "ctrl-up": ["workspace::SendKeystrokes", "{"],
+      "ctrl-down": ["workspace::SendKeystrokes", "}"]
+    }
+  },
+  {
+    "context": "Pane",
+    "bindings": {
+      "ctrl-tab": "pane::ActivateNextItem",
+      "ctrl-shift-tab": "pane::ActivatePreviousItem"
+    }
+  },
+  {
+    "context": "Picker > Editor",
+    "bindings": {
+      "ctrl-c": "menu::Cancel",
+      "ctrl-n": "menu::SelectNext",
+      "ctrl-p": "menu::SelectPrevious"
+    }
+  }
+]

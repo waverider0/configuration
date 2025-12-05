@@ -123,7 +123,6 @@ in
         wireshark
         xournalpp
         yt-dlp
-        zed-editor-fhs
       ]) ++ (with pkgs; []);
     };
   };

@@ -27,8 +27,6 @@ else:
     "dotfiles/vscode_keybindings.json" : f"{HOME}/.config/VSCodium/User/keybindings.json",
     "dotfiles/vscode_settings.json"    : f"{HOME}/.config/VSCodium/User/settings.json",
     "dotfiles/ssh_config"              : f"{HOME}/.ssh/config",
-    "dotfiles/zed_keymap.json"         : f"{HOME}/.config/zed/keymap.json",
-    "dotfiles/zed_settings.json"       : f"{HOME}/.config/zed/settings.json",
     "dotfiles/unix/.tmux.conf"         : f"{HOME}/.tmux.conf",
     "dotfiles/unix/.zshrc"             : f"{HOME}/.zshrc",
   }

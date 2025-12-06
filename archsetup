@@ -1,0 +1,27 @@
+#!/bin/sh
+
+sudo pacman -Syu \
+             age \
+       alacritty \
+            curl \
+          ffmpeg \
+             fzf \
+             git \
+            htop \
+      lm_sensors \
+          neovim \
+         ripgrep \
+            rofi \
+            wget \
+    wl-clipboard \
+             zsh
+
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+cd ..
+rm -rf yay
+
+yay -S brave-bin
+
+./deploy

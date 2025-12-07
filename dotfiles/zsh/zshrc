@@ -35,3 +35,11 @@ fvi() {
 
 zle -N fvi
 bindkey '^P' fvi
+
+volume() {
+  local vol="$1"
+  if [[ $vol =~ ^[0-9]+$ ]]; then
+    vol="${vol}%"
+    wpctl set-volume @DEFAULT_AUDIO_SINK@ "$vol" # pipewire
+  fi
+}

@@ -3,6 +3,7 @@
 sudo pacman -Syu     \
   age                \
   alacritty          \
+  binutils           \
   cloc               \
   curl               \
   ffmpeg             \
@@ -14,9 +15,12 @@ sudo pacman -Syu     \
   less               \
   lm_sensors         \
   lsof               \
+  man-db             \
+  man-pages          \
   moreutils          \
   mpv                \
   neovim             \
+  pciutils           \
   ripgrep            \
   rofi               \
   tmux               \
@@ -31,12 +35,20 @@ makepkg -si
 cd ..
 rm -rf yay
 
-yay -S      \
-  brave-bin \
-  localsend \
-  neofetch  \
-  popsicle  \
-  vscodium  \
+yay -S           \
+  brave-bin      \
+  localsend      \
+  neofetch       \
+  obs-studio     \
+  pinta          \
+  popsicle       \
+  qbittorrent    \
+  signal-desktop \
+  spotdl         \
+  vesktop        \
+  vscodium       \
+  wireshark      \
+  yt-dlp         \
 
 ./deploy.py
 chsh -s /bin/zsh

@@ -27,6 +27,7 @@ sudo pacman -Syu     \
   tmux               \
   waybar             \
   wget               \
+  wireshark-qt       \
   wl-clipboard       \
   zsh
 
@@ -44,14 +45,12 @@ yay -Syu         \
   pinta          \
   popsicle       \
   qbittorrent    \
+  qimgv          \
   signal-desktop \
   spotdl         \
   vesktop        \
   vscodium       \
-  wireshark-qt   \
   yt-dlp
-
-go telemetry off
 
 ./deploy.py
 chsh -s /bin/zsh

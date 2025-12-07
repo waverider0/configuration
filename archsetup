@@ -8,10 +8,16 @@ sudo pacman -Syu \
              fzf \
              git \
             htop \
+       keepassxc \
+            less \
       lm_sensors \
+       moreutils \
+             mpv \
           neovim \
          ripgrep \
             rofi \
+            tmux \
+          waybar \
             wget \
     wl-clipboard \
              zsh
@@ -22,6 +28,9 @@ makepkg -si
 cd ..
 rm -rf yay
 
-yay -S brave-bin
+yay -S \
+  brave-bin
 
-./deploy
+./deploy.py
+chsh -s /bin/zsh
+shutdown now -r

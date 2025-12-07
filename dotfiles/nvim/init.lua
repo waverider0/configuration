@@ -6,6 +6,7 @@ vim.wo.number = true
 vim.cmd("autocmd BufEnter * setlocal formatoptions-=cro shiftwidth=2 tabstop=2 softtabstop=2 expandtab")
 vim.cmd("colorscheme unokai")
 vim.cmd("syntax on")
+vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>ww", ":set wrap! linebreak!<CR>", { silent = true })

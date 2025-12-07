@@ -4,6 +4,7 @@ sudo pacman -Syu     \
   age                \
   alacritty          \
   binutils           \
+  calibre            \
   cloc               \
   curl               \
   ffmpeg             \
@@ -35,7 +36,7 @@ makepkg -si
 cd ..
 rm -rf yay
 
-yay -S           \
+yay -Syu         \
   brave-bin      \
   localsend      \
   neofetch       \
@@ -48,7 +49,7 @@ yay -S           \
   vesktop        \
   vscodium       \
   wireshark      \
-  yt-dlp         \
+  yt-dlp
 
 ./deploy.py
 chsh -s /bin/zsh

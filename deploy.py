@@ -19,15 +19,15 @@ secrets = (
 )
 
 if sys.platform.startswith('linux'):
-  dotfiles['hyprland/hyprland.conf']   = f'{HOME}/.config/hypr/hyprland.conf'
-  dotfiles['nvim/init.lua']            = f'{HOME}/.config/nvim/init.lua'
-  dotfiles['rofi/config.rasi']         = f'{HOME}/.config/rofi/config.rasi'
-  dotfiles['tmux/tmuxconf']            = f'{HOME}/.tmux.conf'
-  dotfiles['vscode/keybindings.json']  = f'{HOME}/.config/VSCodium/User/keybindings.json'
-  dotfiles['vscode/settings.json']     = f'{HOME}/.config/VSCodium/User/settings.json'
-  dotfiles['waybar/config.jsonc']      = f'{HOME}/.config/waybar/config.jsonc'
-  dotfiles['waybar/style.css']         = f'{HOME}/.config/waybar/style.css'
-  dotfiles['zsh/zshrc']                = f'{HOME}/.zshrc' # chsh -s /bin/zsh
+  dotfiles['hyprland/hyprland.conf']  = f'{HOME}/.config/hypr/hyprland.conf'
+  dotfiles['nvim/init.lua']           = f'{HOME}/.config/nvim/init.lua'
+  dotfiles['rofi/config.rasi']        = f'{HOME}/.config/rofi/config.rasi'
+  dotfiles['tmux/tmuxconf']           = f'{HOME}/.tmux.conf'
+  dotfiles['vscode/keybindings.json'] = f'{HOME}/.config/VSCodium/User/keybindings.json'
+  dotfiles['vscode/settings.json']    = f'{HOME}/.config/VSCodium/User/settings.json'
+  dotfiles['waybar/config.jsonc']     = f'{HOME}/.config/waybar/config.jsonc'
+  dotfiles['waybar/style.css']        = f'{HOME}/.config/waybar/style.css'
+  dotfiles['zsh/zshrc']               = f'{HOME}/.zshrc' # chsh -s /bin/zsh
 elif sys.platform.startswith('win'):
   dotfiles['vscode/keybindings.json'] = f'{HOME}/AppData/Roaming/VSCodium/User/keybindings.json'
   dotfiles['vscode/settings.json']    = f'{HOME}/AppData/Roaming/VSCodium/User/settings.json'

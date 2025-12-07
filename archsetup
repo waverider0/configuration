@@ -48,8 +48,10 @@ yay -Syu         \
   spotdl         \
   vesktop        \
   vscodium       \
-  wireshark      \
+  wireshark-qt   \
   yt-dlp
+
+go telemetry off
 
 ./deploy.py
 chsh -s /bin/zsh

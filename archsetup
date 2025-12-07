@@ -1,26 +1,29 @@
 #!/bin/sh
 
-sudo pacman -Syu \
-             age \
-       alacritty \
-            curl \
-          ffmpeg \
-             fzf \
-             git \
-            htop \
-       keepassxc \
-            less \
-      lm_sensors \
-       moreutils \
-             mpv \
-          neovim \
-         ripgrep \
-            rofi \
-            tmux \
-          waybar \
-            wget \
-    wl-clipboard \
-             zsh
+sudo pacman -Syu     \
+  age                \
+  alacritty          \
+  cloc               \
+  curl               \
+  ffmpeg             \
+  fzf                \
+  git                \
+  gnome-disk-utility \
+  htop               \
+  keepassxc          \
+  less               \
+  lm_sensors         \
+  lsof               \
+  moreutils          \
+  mpv                \
+  neovim             \
+  ripgrep            \
+  rofi               \
+  tmux               \
+  waybar             \
+  wget               \
+  wl-clipboard       \
+  zsh
 
 git clone https://aur.archlinux.org/yay.git
 cd yay
@@ -28,8 +31,12 @@ makepkg -si
 cd ..
 rm -rf yay
 
-yay -S \
-  brave-bin
+yay -S      \
+  brave-bin \
+  localsend \
+  neofetch  \
+  popsicle  \
+  vscodium  \
 
 ./deploy.py
 chsh -s /bin/zsh

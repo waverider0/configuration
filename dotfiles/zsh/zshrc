@@ -29,7 +29,7 @@ bindkey -M viins '^[[A' history-beginning-search-backward-end '^[OA' history-beg
 
 fvi() {
   local file
-  file=$(find . -type f | fzf)
+  file=$(find . -type f | fzf --color hl+:red)
   [[ -n $file ]] && vi -- "$file"
 }
 

@@ -48,39 +48,14 @@ in
     };
   };
 
-  programs = {
-    git.enable = true;
-    gnome-disks.enable = true;
-    localsend.enable = true;
-    neovim.enable = true;
-    tmux.enable = true;
-    zsh.enable = true;
-  };
-
   environment = {
     systemPackages = with pkgs; [
-      albert
       binutils
-      clang
-      cloc
-      curl
-      fzf
-      htop
       linuxPackages.perf
-      lm_sensors
-      lsof
       man-pages
       man-pages-posix
-      moreutils
       pciutils
       perf-tools
-      ripgrep
-      wget
-      wl-clipboard
-    ];
-    plasma6.excludePackages = with pkgs.kdePackages; [
-      elisa
-      kate
     ];
   };
 
@@ -91,35 +66,15 @@ in
       description = "allen";
       extraGroups = [ "networkmanager" "wheel" ];
       packages = (with pkgs-unstable; [
-        age
-        alacritty
-        brave
         discord
-        ffmpeg
         kdePackages.kdenlive
-        keepassxc
-        mpv
-        neofetch
         obs-studio
         pinta
         popsicle
-        (python313.withPackages (ps: [
-          ps.cryptography
-          ps.ipykernel
-          ps.matplotlib
-          ps.numpy
-          ps.requests
-          ps.scipy
-          ps.sympy
-          ps.z3-solver
-        ]))
         qbittorrent
         signal-desktop
         spotdl
         spotify
-        tree
-        unrar
-        vscodium-fhs
         wireshark
         xournalpp
         yt-dlp

@@ -1,0 +1,20 @@
+configuration {
+  modi: "drun";
+  show-icons: true;
+  font: "sans 12";
+}
+
+// catppuccin mocha
+* {
+  background: #1e1e2e;
+  foreground: #cdd6f4;
+  border-color: #89b4fa;
+}
+
+element selected {
+  background-color: @border-color;
+}
+
+element.alternate.normal {
+  background-color: @background;
+}

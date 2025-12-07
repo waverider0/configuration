@@ -11,6 +11,21 @@ setopt EXTENDED_GLOB
 setopt GLOBDOTS
 setopt NULL_GLOB
 
+vol() {
+  if (( $1 >= 0 && $1 <= 100 )); then
+    wpctl set-volume @DEFAULT_AUDIO_SINK@ "${1}%" # pipewire
+  fi
+}
+
+fvi() {
+  local file
+  file=$(find . -type f | fzf --color hl+:red)
+  [[ -n $file ]] && vi -- "$file"
+}
+
+zle -N fvi
+bindkey '^P' fvi
+
 bindkey -v
 bindkey -M viins '^[[1;5D' backward-word
 bindkey -M viins '^[[1;5C' forward-word
@@ -27,20 +42,3 @@ zle -N history-beginning-search-backward-end history-search-end
 zle -N history-beginning-search-forward-end history-search-end
 bindkey -M vicmd '^[[A' history-beginning-search-backward-end '^[OA' history-beginning-search-backward-end '^[[B' history-beginning-search-forward-end '^[OB' history-beginning-search-forward-end
 bindkey -M viins '^[[A' history-beginning-search-backward-end '^[OA' history-beginning-search-backward-end '^[[B' history-beginning-search-forward-end '^[OB' history-beginning-search-forward-end
-
-fvi() {
-  local file
-  file=$(find . -type f | fzf --color hl+:red)
-  [[ -n $file ]] && vi -- "$file"
-}
-
-zle -N fvi
-bindkey '^P' fvi
-
-volume() {
-  local vol="$1"
-  if [[ $vol =~ ^[0-9]+$ ]]; then
-    vol="${vol}%"
-    wpctl set-volume @DEFAULT_AUDIO_SINK@ "$vol" # pipewire
-  fi
-}

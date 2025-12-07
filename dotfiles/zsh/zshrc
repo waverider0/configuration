@@ -3,6 +3,7 @@ export EDITOR=nvim
 export MANPAGER='nvim +Man!'
 
 alias code='codium'
+alias ls='ls --color=auto'
 alias open='xdg-open'
 alias vi='nvim'
 

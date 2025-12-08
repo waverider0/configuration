@@ -19,6 +19,7 @@ secrets = (
 )
 
 if sys.platform.startswith('linux'):
+  dotfiles['flameshot/flameshot.ini'] = f'{HOME}/.config/flameshot/flameshot.ini'
   dotfiles['hyprland/hyprland.conf']  = f'{HOME}/.config/hypr/hyprland.conf'
   dotfiles['nvim/init.lua']           = f'{HOME}/.config/nvim/init.lua'
   dotfiles['rofi/config.rasi']        = f'{HOME}/.config/rofi/config.rasi'

@@ -5,9 +5,9 @@
   "modules-center" : ["clock"],
   "modules-right"  : ["tray", "battery", "cpu", "memory"],
   "clock"          : {"format": "{:%H:%M | %d/%m}"},
-  "battery"        : {"interval": 2, "format": "  |  BAT: {capacity}%"},
-  "cpu"            : {"interval": 2, "format": "  |  CPU: {usage}%"},
-  "memory"         : {"interval": 2, "format": "  |  MEM: {used}GB"},
+  "battery"        : {"interval": 4, "format": "  |  BAT: {capacity}%"},
+  "cpu"            : {"interval": 4, "format": "  |  CPU: {usage}%"},
+  "memory"         : {"interval": 4, "format": "  |  MEM: {used}GB"},
   "hyprland/workspaces": {
     "persistent-workspaces": {"1": [], "2": [], "3": [], "4": []},
     "format": "{name}",

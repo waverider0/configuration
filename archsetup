@@ -22,6 +22,10 @@ sudo pacman -Syu     \
   moreutils          \
   mpv                \
   neovim             \
+  noto-fonts         \
+  noto-fonts-cjk     \
+  noto-fonts-emoji   \
+  noto-fonts-extra   \
   pciutils           \
   ripgrep            \
   rofi               \

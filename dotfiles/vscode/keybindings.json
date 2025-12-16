@@ -11,5 +11,8 @@
   {"key": "ctrl+n", "command": "selectNextSuggestion", "when": "suggestWidgetVisible && editorTextFocus"},
   {"key": "ctrl+p", "command": "selectPrevSuggestion", "when": "suggestWidgetVisible && editorTextFocus"},
 
-  {"key": "ctrl+b", "command": "workbench.action.toggleSidebarVisibility"}
+  {"key": "ctrl+b", "command": "workbench.action.toggleSidebarVisibility"},
+  {"key": "ctrl+.", "command": "workbench.action.toggleAuxiliaryBar"},
+  {"key": "ctrl+,", "command": "workbench.action.focusActiveEditorGroup", "when": "auxiliaryBarFocus"},
+  {"key": "ctrl+,", "command": "workbench.action.focusAuxiliaryBar", "when": "!auxiliaryBarFocus"}
 ]

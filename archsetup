@@ -57,6 +57,9 @@ yay -Syu         \
   vscodium       \
   yt-dlp
 
+curl -fsSL https://opencode.ai/install | bash
+curl -fsSL https://ollama.com/install.sh | sh
+
 ./deploy.py
 chsh -s /bin/zsh
 shutdown now -r

@@ -2,6 +2,8 @@ export PS1='%n@%m:%F{#00ff77}%~%f$ '
 export EDITOR=nvim
 export MANPAGER='nvim +Man!'
 
+export PATH="$HOME/.opencode/bin:$PATH"
+
 alias code='codium'
 alias ls='ls --color=auto'
 alias open='xdg-open'
@@ -11,6 +13,7 @@ setopt EXTENDED_GLOB
 setopt GLOBDOTS
 setopt NULL_GLOB
 
+# TODO: https://github.com/Alexays/Waybar/wiki/Module:-WirePlumber
 vol() {
   if (( $1 >= 0 && $1 <= 100 )); then
     wpctl set-volume @DEFAULT_AUDIO_SINK@ "${1}%" # pipewire

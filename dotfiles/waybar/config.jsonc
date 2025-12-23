@@ -4,7 +4,7 @@
   "modules-left"   : ["hyprland/workspaces"],
   "modules-center" : ["clock"],
   "modules-right"  : ["tray", "battery", "cpu", "memory"],
-  "clock"          : {"format": "{:%H:%M | %d/%m}"},
+  "clock"          : {"format": "{:%H:%M | %m/%d | %A}"},
   "battery"        : {"interval": 4, "format": "  |  BAT: {capacity}%"},
   "cpu"            : {"interval": 4, "format": "  |  CPU: {usage}%"},
   "memory"         : {"interval": 4, "format": "  |  MEM: {used}GB"},

@@ -2,8 +2,8 @@
 
 import os, sys, shutil, subprocess
 
-BASE_DIR          = os.path.dirname(os.path.abspath(__file__))
-SECRETS_DIR       = os.path.join(BASE_DIR, "secrets")
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+SECRETS_DIR = os.path.join(BASE_DIR, "secrets")
 ENCRYPTED_ARCHIVE = os.path.join(BASE_DIR, "secrets.tar.gz.age")
 
 def encrypt_secrets():

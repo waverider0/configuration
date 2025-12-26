@@ -25,7 +25,7 @@ if sys.platform.startswith('linux'):
   dotfiles['vscode/keybindings.json'] = f'{HOME}/.config/VSCodium/User/keybindings.json'
   dotfiles['vscode/settings.json']    = f'{HOME}/.config/VSCodium/User/settings.json'
   dotfiles['zsh/zshrc']               = f'{HOME}/.zshrc'
-  appends['hypr/allen.conf']          = f'{HOME}/.config/hypr/hyprland.conf'
+  appends['hypr/hyprland.conf']       = f'{HOME}/.config/hypr/hyprland.conf'
 elif sys.platform.startswith('win'):
   dotfiles['vscode/keybindings.json'] = f'{HOME}/AppData/Roaming/VSCodium/User/keybindings.json'
   dotfiles['vscode/settings.json']    = f'{HOME}/AppData/Roaming/VSCodium/User/settings.json'

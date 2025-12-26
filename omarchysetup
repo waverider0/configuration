@@ -11,6 +11,7 @@ sudo pacman -Syu     \
   tmux               \
   wget               \
   wireshark-qt       \
+  wlsunset           \
   zsh
 
 yay -Syu      \

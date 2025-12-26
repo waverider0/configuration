@@ -13,13 +13,14 @@ sudo pacman -Syu     \
   wireshark-qt       \
   zsh
 
-yay -Syu         \
-  neofetch       \
-  popsicle       \
-  qbittorrent    \
-  spotdl         \
-  vesktop        \
-  vscodium       \
+yay -Syu      \
+  brave-bin   \
+  neofetch    \
+  popsicle    \
+  qbittorrent \
+  spotdl      \
+  vesktop     \
+  vscodium    \
   yt-dlp
 
 curl -fsSL https://opencode.ai/install | bash

@@ -3,6 +3,7 @@
 sudo pacman -Syu     \
   age                \
   cloc               \
+  dolphin            \
   gnome-disk-utility \
   keepassxc          \
   lsof               \

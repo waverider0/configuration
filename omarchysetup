@@ -2,13 +2,17 @@
 
 sudo pacman -Syu     \
   age                \
+  binutils           \
   cloc               \
   dolphin            \
+  gdb                \
   gnome-disk-utility \
   keepassxc          \
+  kleopatra          \
   lsof               \
   moreutils          \
   pciutils           \
+  signal-desktop     \
   tmux               \
   wget               \
   wireshark-qt       \
@@ -17,6 +21,7 @@ sudo pacman -Syu     \
 
 yay -Syu      \
   brave-bin   \
+  gf2-git     \
   neofetch    \
   popsicle    \
   qbittorrent \

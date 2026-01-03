@@ -16,8 +16,7 @@ def encrypt_secrets():
   age.wait()
   if tar.returncode != 0 or age.returncode != 0: raise RuntimeError("Encryption failed")
   print(f"encrypted -> {os.path.basename(ENCRYPTED_ARCHIVE)}")
-  shutil.rmtree(SECRETS_DIR)
-  print(f"deleted: {SECRETS_DIR}")
+  shutil.rmtree(SECRETS_DIR); print(f"deleted: {SECRETS_DIR}")
 
 def decrypt_secrets():
   if not os.path.exists(ENCRYPTED_ARCHIVE): raise FileNotFoundError(f"{ENCRYPTED_ARCHIVE} not found")

@@ -56,8 +56,7 @@ if __name__ == '__main__':
     os.makedirs(os.path.dirname(dest), exist_ok=True)
     shutil.copy(src, dest)
     print(f'copied -> {dest}')
-  shutil.rmtree(secret_manager.SECRETS_DIR)
-  print(f'deleted: {secret_manager.SECRETS_DIR}')
+  shutil.rmtree(secret_manager.SECRETS_DIR); print(f'deleted: {secret_manager.SECRETS_DIR}')
 
   print('Done!')
 

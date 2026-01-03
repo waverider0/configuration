@@ -44,12 +44,6 @@ local function align_delim(after)
       end
     end
   end
-
-  -- `nvim_feedkeys` and `schedule` are required boilerplate for logging in visual mode
-  -- vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes('<Esc>', true, false, true), 'n', false)
-  -- vim.schedule(function()
-  --   vim.print(string.format('delim: %s | rows: %d-%d | start_col: %d | delim_positions: %s', vim.inspect(delim), start_row, end_row, start_col, vim.inspect(delim_positions)))
-  -- end)
 end
 
 vim.keymap.set("v", "<leader>>", function() align_delim(true) end, { silent = true })

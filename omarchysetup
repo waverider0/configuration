@@ -4,7 +4,6 @@ sudo pacman -Syu     \
   age                \
   binutils           \
   cloc               \
-  dolphin            \
   gdb                \
   gnome-disk-utility \
   keepassxc          \

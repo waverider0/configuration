@@ -14,7 +14,7 @@ local hl_groups = {
   'Underlined', 'Ignore', 'Error', 'Todo'
 }
 for _, group in ipairs(hl_groups) do vim.api.nvim_set_hl(0, group, {}) end
-vim.api.nvim_set_hl(0, 'Comment', { fg = '#75715e' })
+vim.api.nvim_set_hl(0, 'Comment', { fg = '#a6e22e' })
 vim.api.nvim_set_hl(0, 'Constant', { fg = '#ae81ff' })
 vim.api.nvim_set_hl(0, 'String', { fg = '#e6db74' })
 vim.api.nvim_set_hl(0, 'Character', { link = 'String' })

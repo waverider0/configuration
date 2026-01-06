@@ -1,16 +1,34 @@
 vim.opt.autoindent = true
-vim.opt.clipboard = "unnamedplus" vim.opt.cursorline = true
+vim.opt.clipboard = 'unnamedplus' vim.opt.cursorline = true
 vim.wo.relativenumber = true
 vim.wo.number = true
 
-vim.cmd("autocmd BufEnter * setlocal formatoptions-=cro shiftwidth=2 tabstop=2 softtabstop=2 expandtab")
-vim.cmd("colorscheme unokai")
-vim.cmd("syntax on")
-vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+-- https://neovim.io/doc/user/syntax.html#group-name
+local hl_groups = {
+  'Comment', 'Constant', 'String', 'Character', 'Number', 'Boolean', 'Float',
+  'Identifier', 'Function',
+  'Statement', 'Conditional', 'Repeat', 'Label', 'Operator', 'Keyword', 'Exception',
+  'PreProc', 'Include', 'Define', 'Macro', 'PreCondit',
+  'Type', 'StorageClass', 'Structure', 'Typedef',
+  'Special', 'SpecialChar', 'Tag', 'Delimiter', 'SpecialComment', 'Debug',
+  'Underlined', 'Ignore', 'Error', 'Todo'
+}
+for _, group in ipairs(hl_groups) do vim.api.nvim_set_hl(0, group, {}) end
+vim.api.nvim_set_hl(0, 'Comment', { fg = '#75715e' })
+vim.api.nvim_set_hl(0, 'Constant', { fg = '#e6db74' })
+vim.api.nvim_set_hl(0, 'String', { fg = '#a6e22e' })
+vim.api.nvim_set_hl(0, 'Character', { link = 'String' })
+vim.api.nvim_set_hl(0, 'Number', { link = 'Constant' })
+vim.api.nvim_set_hl(0, 'Boolean', { link = 'Constant' })
+vim.api.nvim_set_hl(0, 'Float', { link = 'Constant' })
+vim.api.nvim_set_hl(0, 'Todo', { link = 'Comment' })
 
-vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>ww", ":set wrap! linebreak!<CR>", { silent = true })
-vim.keymap.set({"i","n","v"}, "<C-c>", "<Esc>:nohlsearch<CR>", { silent = true })
+vim.api.nvim_set_hl(0, 'Normal', { bg = 'none' })
+vim.cmd('autocmd BufEnter * setlocal formatoptions-=cro shiftwidth=2 tabstop=2 softtabstop=2 expandtab')
+
+vim.g.mapleader = ' '
+vim.keymap.set('n', '<leader>ww', ':set wrap! linebreak!<CR>', { silent = true })
+vim.keymap.set({'i','n','v'}, '<C-c>', '<Esc>:nohlsearch<CR>', { silent = true })
 
 local function align_delim(after)
   local delim = vim.fn.input('Delimiter: ')
@@ -46,5 +64,5 @@ local function align_delim(after)
   end
 end
 
-vim.keymap.set("v", "<leader>>", function() align_delim(true) end, { silent = true })
-vim.keymap.set("v", "<leader><", function() align_delim(false) end, { silent = true })
+vim.keymap.set('v', '<leader>>', function() align_delim(true) end, { silent = true })
+vim.keymap.set('v', '<leader><', function() align_delim(false) end, { silent = true })

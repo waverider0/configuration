@@ -15,12 +15,8 @@ local hl_groups = {
 }
 for _, group in ipairs(hl_groups) do vim.api.nvim_set_hl(0, group, {}) end
 vim.api.nvim_set_hl(0, 'Comment', { fg = '#a6e22e' })
-vim.api.nvim_set_hl(0, 'Constant', { fg = '#ae81ff' })
 vim.api.nvim_set_hl(0, 'String', { fg = '#e6db74' })
 vim.api.nvim_set_hl(0, 'Character', { link = 'String' })
-vim.api.nvim_set_hl(0, 'Number', { link = 'Constant' })
-vim.api.nvim_set_hl(0, 'Boolean', { link = 'Constant' })
-vim.api.nvim_set_hl(0, 'Float', { link = 'Constant' })
 vim.api.nvim_set_hl(0, 'Todo', { link = 'Comment' })
 
 vim.api.nvim_set_hl(0, 'Normal', { bg = 'none' })

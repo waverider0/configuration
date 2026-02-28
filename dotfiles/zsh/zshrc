@@ -3,6 +3,7 @@ export EDITOR=nvim
 export MANPAGER='nvim +Man!'
 
 export PATH="$HOME/.opencode/bin:$PATH"
+export PATH="/home/allen/.pixi/bin:$PATH"
 
 alias code='codium'
 alias ls='ls --color=auto'
@@ -12,13 +13,6 @@ alias vi='nvim'
 setopt EXTENDED_GLOB
 setopt GLOBDOTS
 setopt NULL_GLOB
-
-# TODO: https://github.com/Alexays/Waybar/wiki/Module:-WirePlumber
-vol() {
-  if (( $1 >= 0 && $1 <= 100 )); then
-    wpctl set-volume @DEFAULT_AUDIO_SINK@ "${1}%" # pipewire
-  fi
-}
 
 fvi() {
   local file

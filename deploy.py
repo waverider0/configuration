@@ -3,6 +3,8 @@
 import os, sys, shutil
 import secret_manager
 
+# TODO: delete ~/.config/tmux/
+
 HOME = os.path.expanduser('~')
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DOTFILES_DIR = os.path.join(BASE_DIR, 'dotfiles')

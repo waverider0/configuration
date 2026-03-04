@@ -2,8 +2,7 @@ export PS1="%n@%m:%F{#00ff77}%~%f$ "
 export EDITOR=nvim
 export MANPAGER="nvim +Man!"
 
-export PATH="$HOME/allen/.opencode/bin:$PATH"
-export PATH="$HOME/allen/.pixi/bin:$PATH"
+export PATH="$HOME/.opencode/bin:$HOME/.pixi/bin:$PATH"
 
 alias code="codium"
 alias ls="ls --color=auto"

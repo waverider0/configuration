@@ -21,7 +21,7 @@ fvi() {
 }
 
 zle -N fvi
-bindkey '^P' fvi
+bindkey '^T' fvi
 
 bindkey -v
 bindkey -M viins '^[[1;5D' backward-word

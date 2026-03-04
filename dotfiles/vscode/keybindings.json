@@ -4,7 +4,7 @@
   {"key": "ctrl+shift+tab", "command": "workbench.action.previousEditor"},
   {"key": "ctrl+w", "command": "-extension.vim_ctrl+w", "when": "editorTextFocus && vim.active && vim.use<C-w> && !inDebugRepl"},
 
-  // nvim telescope
+  // telescope
   {"key": "ctrl+p", "command": "-workbench.action.quickOpen"},
   {"key": "ctrl+t", "command": "workbench.action.quickOpen"},
   {"key": "ctrl+c", "command": "workbench.action.closeQuickOpen", "when": "inQuickOpen"},

@@ -21,7 +21,7 @@ fvi() {
 }
 
 zle -N fvi
-bindkey '^T' fvi
+bindkey '^P' fvi # different from vscode (^T)
 
 bindkey -v
 bindkey -M viins '^[[1;5D' backward-word

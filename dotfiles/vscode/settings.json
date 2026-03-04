@@ -4,5 +4,6 @@
   "editor.minimap.enabled": false,
   "editor.tabSize": 2,
   "vim.useSystemClipboard": true,
-  "workbench.startupEditor": "none"
+  "workbench.startupEditor": "none",
+  "workbench.colorTheme": "Tokyo Night"
 }

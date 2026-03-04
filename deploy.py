@@ -23,6 +23,9 @@ secrets = (
 
 if sys.platform.startswith('linux'):
   dotfiles['nvim/init.lua']           = f'{HOME}/.config/nvim/init.lua'
+  dotfiles['opencode/AGENTS.md']      = f'{HOME}/.config/opencode/AGENTS.md'
+  dotfiles['opencode/opencode.json']  = f'{HOME}/.config/opencode/opencode.json'
+  dotfiles['opencode/tui.json']       = f'{HOME}/.config/opencode/tui.json'
   dotfiles['tmux/tmux.conf']          = f'{HOME}/.tmux.conf'
   dotfiles['vscode/keybindings.json'] = f'{HOME}/.config/VSCodium/User/keybindings.json'
   dotfiles['vscode/settings.json']    = f'{HOME}/.config/VSCodium/User/settings.json'

@@ -18,5 +18,8 @@
   // L and R auxiliary bars
   {"key": "ctrl+b", "command": "workbench.action.toggleSidebarVisibility"},
   {"key": "ctrl+.", "command": "workbench.action.toggleAuxiliaryBar", "when": "auxiliaryBarVisible || auxiliaryBarFocus"},
-  {"key": "ctrl+.", "command": "workbench.action.focusAuxiliaryBar", "when": "!auxiliaryBarVisible"}
+  {"key": "ctrl+.", "command": "workbench.action.focusAuxiliaryBar", "when": "!auxiliaryBarVisible"},
+
+  // pass tab through to terminal
+  {"key": "tab", "command": "workbench.action.terminal.sendSequence", "when": "terminalFocus", "args": {"text": "\t"}}
 ]

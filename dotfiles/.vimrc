@@ -1,4 +1,5 @@
 set autoindent
+set noswapfile
 set clipboard=unnamedplus
 set number
 set relativenumber

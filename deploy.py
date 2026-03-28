@@ -38,9 +38,11 @@ if __name__ == '__main__':
 
 	for src, dest in file_map.items():
 		if not os.path.exists(src): continue
+		parent_dir = os.path.dirname(dest)
+		if parent_dir: os.makedirs(parent_dir, exist_ok=True)
 		shutil.copy2(src, dest)
-		print(f'copied -> {dest}')
+		print(f'copied -> {os.path.normpath(dest)}')
 
 	shutil.rmtree(secret_manager.SECRETS_DIR)
-	print(f'deleted: {secret_manager.SECRETS_DIR}')
+	print(f'deleted: {os.path.normpath(secret_manager.SECRETS_DIR)}')
 	print('Done!')

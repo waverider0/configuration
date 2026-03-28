@@ -34,15 +34,15 @@ else:
 	raise NotImplementedError(f'{sys.platform} is not supported')
 
 if __name__ == '__main__':
-	secret_manager.decrypt_secrets()
-
-	for src, dest in file_map.items():
-		if not os.path.exists(src): continue
-		parent_dir = os.path.dirname(dest)
-		if parent_dir: os.makedirs(parent_dir, exist_ok=True)
-		shutil.copy2(src, dest)
-		print(f'copied -> {os.path.normpath(dest)}')
-
-	shutil.rmtree(secret_manager.SECRETS_DIR)
-	print(f'deleted: {os.path.normpath(secret_manager.SECRETS_DIR)}')
-	print('Done!')
+	try:
+		secret_manager.decrypt_secrets()
+		for src, dest in file_map.items():
+			if not os.path.exists(src): continue
+			parent_dir = os.path.dirname(dest)
+			if parent_dir: os.makedirs(parent_dir, exist_ok=True)
+			shutil.copy2(src, dest)
+			print(f'copied -> {os.path.normpath(dest)}')
+	finally:
+		shutil.rmtree(secret_manager.SECRETS_DIR, ignore_errors=True)
+		print(f'deleted: {os.path.normpath(secret_manager.SECRETS_DIR)}')
+		print('Done')

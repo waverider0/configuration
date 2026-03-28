@@ -20,12 +20,15 @@ if sys.platform.startswith('linux'):
 	file_map[f'{REPO}/secrets/.ssh/github']             = f'{HOME}/.ssh/github'
 
 elif sys.platform.startswith('win'):
-	file_map[f'{REPO}/dotfiles/.gitconfig']      = f'{HOME}/.gitconfig'
-	file_map[f'{REPO}/dotfiles/.ssh/config']     = f'{HOME}/.ssh/config'
-	file_map[f'{REPO}/dotfiles/.ssh/github.pub'] = f'{HOME}/.ssh/github.pub'
-	file_map[f'{REPO}/dotfiles/.vimrc']          = f'{HOME}/.vimrc'
-	file_map[f'{REPO}/secrets/.kdbx.kdbx']       = f'{HOME}/.kdbx.kdbx'
-	file_map[f'{REPO}/secrets/.ssh/github']      = f'{HOME}/.ssh/github'
+	APPDATA = os.environ['APPDATA']
+	file_map[f'{REPO}/dotfiles/.gitconfig']          = f'{HOME}/.gitconfig'
+	file_map[f'{REPO}/dotfiles/.ssh/config']         = f'{HOME}/.ssh/config'
+	file_map[f'{REPO}/dotfiles/.ssh/github.pub']     = f'{HOME}/.ssh/github.pub'
+	file_map[f'{REPO}/dotfiles/.vimrc']              = f'{HOME}/.vimrc'
+	file_map[f'{REPO}/dotfiles/windows/cmdrc.bat']   = f'{APPDATA}/Microsoft/Windows/Start Menu/Programs/Startup/cmdrc.bat'
+	file_map[f'{REPO}/dotfiles/windows/startup.bat'] = f'{APPDATA}/Microsoft/Windows/Start Menu/Programs/Startup/startup.bat'
+	file_map[f'{REPO}/secrets/.kdbx.kdbx']           = f'{HOME}/.kdbx.kdbx'
+	file_map[f'{REPO}/secrets/.ssh/github']          = f'{HOME}/.ssh/github'
 
 else:
 	raise NotImplementedError(f'{sys.platform} is not supported')

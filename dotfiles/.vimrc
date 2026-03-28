@@ -1,12 +1,31 @@
-autocmd BufEnter * setlocal formatoptions-=cro shiftwidth=4 tabstop=4 softtabstop=4 noexpandtab
-colorscheme unokai
-highlight Normal ctermbg=none
-
 set autoindent
 set clipboard=unnamedplus
 set number
 set relativenumber
-set statusline=%<%F\ %h%m%r%=%-14.(%l,%c%V%)\ %P
+autocmd BufEnter * setlocal formatoptions-=cro shiftwidth=3 tabstop=3 softtabstop=3 noexpandtab
+
+"
+" COLORS
+" https://vimdoc.sourceforge.net/htmldoc/syntax.html
+"
+
+colorscheme unokai
+highlight Normal ctermbg=none
+let s:c_fixed_width_type_keywords = 'u8 u16 u32 u64 i8 i16 i32 i64 f32 f64'
+let s:c_type_pattern = '\<[A-Z][A-Za-z0-9_]*[a-z][A-Za-z0-9_]*\>' " CamelCase or CamelSnake_HYBRID 
+let s:c_macro_pattern = '\<[A-Z][A-Z0-9_]*\>' " SCREAMING_SNAKE_CASE
+
+augroup c_extra_syntax_highlights
+	autocmd Syntax c syntax case ignore
+	autocmd Syntax c execute 'syntax keyword Type ' . s:c_fixed_width_type_keywords
+	autocmd Syntax c syntax case match
+	autocmd Syntax c execute 'syntax match Type /' . s:c_type_pattern . '/'
+	autocmd Syntax c execute 'syntax match Constant /' . s:c_macro_pattern . '/ display containedin=ALLBUT,cComment,cCommentL,cString,cCharacter,cCppOut,cCppOut2,cCppSkip,cIncluded'
+augroup END
+
+"
+" REMAPS
+"
 
 let mapleader = ' '
 nnoremap <C-c> <cmd>silent! nohlsearch<CR>

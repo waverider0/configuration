@@ -9,15 +9,24 @@ REPO = os.path.dirname(os.path.abspath(__file__))
 file_map = dict()
 
 if sys.platform.startswith('linux'):
-	file_map[f'{REPO}/.gitconfig']             = f'{HOME}/.gitconfig'
-	file_map[f'{REPO}/.ssh/config']            = f'{HOME}/.ssh/config'
-	file_map[f'{REPO}/.ssh/github.pub']        = f'{HOME}/.ssh/github.pub'
-	file_map[f'{REPO}/.tmux.conf']             = f'{HOME}/.tmux.conf'
-	file_map[f'{REPO}/.vimrc']                 = f'{HOME}/.vimrc'
-	file_map[f'{REPO}/opencode/AGENTS.md']     = f'{HOME}/.config/opencode/AGENTS.md'
-	file_map[f'{REPO}/opencode/opencode.json'] = f'{HOME}/.config/opencode/opencode.json'
-	file_map[f'{REPO}/secrets/.kdbx.kdbx']     = f'{HOME}/.kdbx.kdbx'
-	file_map[f'{REPO}/secrets/.ssh/github']    = f'{HOME}/.ssh/github'
+	file_map[f'{REPO}/dotfiles/.gitconfig']             = f'{HOME}/.gitconfig'
+	file_map[f'{REPO}/dotfiles/.ssh/config']            = f'{HOME}/.ssh/config'
+	file_map[f'{REPO}/dotfiles/.ssh/github.pub']        = f'{HOME}/.ssh/github.pub'
+	file_map[f'{REPO}/dotfiles/.tmux.conf']             = f'{HOME}/.tmux.conf'
+	file_map[f'{REPO}/dotfiles/.vimrc']                 = f'{HOME}/.vimrc'
+	file_map[f'{REPO}/dotfiles/opencode/AGENTS.md']     = f'{HOME}/.config/opencode/AGENTS.md'
+	file_map[f'{REPO}/dotfiles/opencode/opencode.json'] = f'{HOME}/.config/opencode/opencode.json'
+	file_map[f'{REPO}/secrets/.kdbx.kdbx']              = f'{HOME}/.kdbx.kdbx'
+	file_map[f'{REPO}/secrets/.ssh/github']             = f'{HOME}/.ssh/github'
+
+elif sys.platform.startswith('win'):
+	file_map[f'{REPO}/dotfiles/.gitconfig']      = f'{HOME}/.gitconfig'
+	file_map[f'{REPO}/dotfiles/.ssh/config']     = f'{HOME}/.ssh/config'
+	file_map[f'{REPO}/dotfiles/.ssh/github.pub'] = f'{HOME}/.ssh/github.pub'
+	file_map[f'{REPO}/dotfiles/.vimrc']          = f'{HOME}/.vimrc'
+	file_map[f'{REPO}/secrets/.kdbx.kdbx']       = f'{HOME}/.kdbx.kdbx'
+	file_map[f'{REPO}/secrets/.ssh/github']      = f'{HOME}/.ssh/github'
+
 else:
 	raise NotImplementedError(f'{sys.platform} is not supported')
 

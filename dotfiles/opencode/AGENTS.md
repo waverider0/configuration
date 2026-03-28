@@ -64,3 +64,12 @@ the dynamics of the data determine the shape of the program
 - if the work is close to purely functional, with few references to global state, try to make it completely functional
 - try to use const on both parameters and functions when the function really must be used in multiple places
 - minimize control flow complexity and "area under ifs", favoring consistent execution paths and times over "optimally" avoiding unnecessary work
+
+## personal code style
+- tabs for indentation
+- spaces for alignment
+- snake_case for variable and function names
+- CamelCase or CamelSnake_Hybrid for structs, classes, typedefs
+- SCREAMING_SNAKE_CASE for compile-time constants, macros, #defines
+- allman style braces for functions, loops, and if blocks that exceed 1 line
+- when working in an existing codebase, copy the existing style unless told otherwise

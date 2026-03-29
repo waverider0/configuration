@@ -12,6 +12,7 @@ set noshowmode
 set noswapfile
 set number
 set relativenumber
+set shortmess-=S
 set termguicolors
 set undodir=~/.vim/undo
 set undofile

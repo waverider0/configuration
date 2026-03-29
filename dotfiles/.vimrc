@@ -60,8 +60,6 @@ colorscheme monokai
 hi Normal guibg=NONE ctermbg=NONE
 
 let mapleader = ' '
-vnoremap J :m '>+1<CR>gv=gv
-vnoremap K :m '<-2<CR>gv=gv
 cnoremap <C-c> <Esc>
 inoremap <C-c> <Esc>
 nnoremap <C-d> <C-d>zz

@@ -51,7 +51,7 @@ the dynamics of the data determine the shape of the program
 ## good code is like soft playdough
 - write self-documenting code with clear naming and structure so that the 'what' and 'how' are obvious from the executable code itself
 - prefer simple maintainable code over brittle premature optimizations
-- prefer clear_descriptive_variable_names as opposed to short uninformative ones (like the ones in libc)
+- prefer clear_descriptive_variable_names rather than short uninformative ones (like the ones in libc)
 - prefer specificity over generality
 - don't be afraid of your code
 - minimize conceptual complexity
@@ -72,4 +72,5 @@ the dynamics of the data determine the shape of the program
 - CamelCase or CamelSnake_Hybrid for structs, classes, typedefs
 - SCREAMING_SNAKE_CASE for compile-time constants, macros, #defines
 - allman style braces for functions, loops, and if blocks that exceed 1 line
+- prefer compact horizontal code for simple, regular codepaths; expand vertically when needed
 - when working in an existing codebase, copy the existing style unless told otherwise
